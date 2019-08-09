@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   include Clearance::User
 
-  attr_accessor :store_id
+  validates :store_id, unique: true, required: true
+  validates :name, required: true
 end

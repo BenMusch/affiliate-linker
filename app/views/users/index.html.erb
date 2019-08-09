@@ -1,0 +1,6 @@
+<pre><%= @users.first.email %></pre>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.store_id %></li>
+  <% end %>
+</ul>
