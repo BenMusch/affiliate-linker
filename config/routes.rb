@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  root to: "users#index"
+  root to: "links#index"
 
-  resources :users, only: [:new, :create, :index]
+  resources :users, only: [:new, :create]
   resources :passwords
   resource :password
   resource :session, only: [:new, :create, :delete]
+  resources :links, only: [:new, :create, :index]
 
   get "/sign_up", to: "users#new", as: "sign_up"
   delete "/sign_out", to: "sessions#destroy", as: "sign_out"

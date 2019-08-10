@@ -1,0 +1,17 @@
+<h2>My Links</h2>
+
+<% if @links.any? %>
+  <ul>
+    <% @links.each do |link| %>
+      <li><%= link_to link.display_title, link.url %></li>
+    <% end %>
+  </ul>
+
+  <br/>
+
+  <%= button_to "Add another link", new_link_path, method: :get %>
+<% else %>
+  <h3>
+    You haven't added any links yet. <%= link_to "Add one here!", new_link_path %>
+  </h3>
+<% end %>
