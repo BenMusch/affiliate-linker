@@ -43,3 +43,15 @@ hr {
   border-top: 0;
   margin: $base-spacing 0;
 }
+
+.nav-brand {
+  a {
+    color: $dark-gray;
+    font-size: modular-scale(1.8);
+    text-decoration: none;
+
+    &:active {
+      border: none;
+    }
+  }
+}

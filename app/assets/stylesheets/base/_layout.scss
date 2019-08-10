@@ -1,3 +1,8 @@
+$neat-grid: (
+  columns: 12,
+  gutter: 250px,
+);
+
 html {
   background-color: $viewport-background-color;
   box-sizing: border-box;
@@ -16,4 +21,43 @@ body {
 
 body {
   margin: 0;
+}
+
+.container {
+    @include grid-container;
+}
+
+.wrapper {
+  @include grid-column(12);
+}
+
+nav {
+  border-bottom: 1px solid $medium-gray;
+  margin: 1.25rem 0;
+}
+
+.nav-brand {
+  display: block;
+  float: left;
+  line-height: 2;
+}
+
+.nav-links {
+  display: block;
+  float: right;
+  line-height: 4;
+
+  li {
+    display: block;
+    float: left;
+    padding-right: 10px;
+  }
+}
+
+.other-links {
+  margin-top: 1rem;
+
+  a {
+    color: $medium-gray !important;
+  }
 }

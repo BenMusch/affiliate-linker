@@ -3,18 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <%#
-    Configure default and controller-, and view-specific titles in
-    config/locales/en.yml. For more see:
-    https://github.com/calebthompson/title#usage
-  %>
-  <title><%= title %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render "flashes" -%>
-  <%= yield %>
+  <section class="container" id="main">
+    <nav class="wrapper">
+      <h1 class="nav-brand">
+        <%= link_to "Link Manager", root_path %>
+      </h1>
+
+      <ul class="nav-links">
+        <% if signed_in? %>
+          <li>User: <%= current_user.email %></li>
+          <li><%= link_to "Log Out", sign_out_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", sign_up_path %></li>
+          <li><%= link_to "Log In", sign_in_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <%= render "flashes" -%>
+    </div>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
+  </section>
   <%= render "javascript" %>
   <%= render "css_overrides" %>
 </body>

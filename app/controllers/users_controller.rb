@@ -3,16 +3,6 @@ class UsersController < Clearance::UsersController
     @users = User.all
   end
 
-  def create
-    @user = user_from_params
-
-    if @user.save
-      redirect_back_or url_after_create
-    else
-      render "new"
-    end
-  end
-
   private
 
   def user_params
