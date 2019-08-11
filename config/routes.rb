@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount API::Base, at: "/"
+
   root to: "links#index"
 
   resources :users, only: [:new, :create]

@@ -24,6 +24,8 @@ gem "tzinfo-data", platforms: [:mingw, :x64_mingw, :mswin, :jruby]
 gem "uglifier"
 gem "bootsnap", require: false
 gem "clearance"
+gem "grape"
+gem "grape-active_model_serializers"
 
 
 group :development do
