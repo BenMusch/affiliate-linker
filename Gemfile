@@ -26,6 +26,7 @@ gem "bootsnap", require: false
 gem "clearance"
 gem "grape"
 gem "grape-active_model_serializers"
+gem "rack-cors", :require => "rack/cors"
 
 
 group :development do

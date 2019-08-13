@@ -205,6 +205,7 @@ GEM
     rack-canonical-host (0.2.3)
       addressable (> 0, < 3)
       rack (>= 1.0.0, < 3)
+    rack-cors (1.0.3)
     rack-mini-profiler (1.0.2)
       rack (>= 1.2.0)
     rack-test (1.1.0)
@@ -367,6 +368,7 @@ DEPENDENCIES
   pry-rails
   puma
   rack-canonical-host
+  rack-cors
   rack-mini-profiler
   rack-timeout
   rails (~> 5.2.3)
