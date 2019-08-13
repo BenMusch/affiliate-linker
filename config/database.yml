@@ -18,3 +18,6 @@ production: &deploy
   timeout: 5000
   url:  <%= ENV.fetch("DATABASE_URL", "") %>
   adapter: postgresql
+  database: ddjcj6e8nj195j
+  username: yygblbdateyqkk
+  password: <%= ENV.fetch("DATABASE_PASSWORD", "") %>
